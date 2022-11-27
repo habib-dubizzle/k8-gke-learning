@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: iac-python
+  labels:
+    app: iac
+spec:
+  containers:
+  - name: iac-python
+    image: codingforentrepreneurs/iac-python:latest
+    env:
+      - name: PORT
+        value: "8181"
+    ports:
+    - containerPort: 8181
